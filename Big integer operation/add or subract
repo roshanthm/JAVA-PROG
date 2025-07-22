@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.math.BigInteger;
+
+class BigIntegerCalculator {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Enter first large number:");
+        String num1 = in.nextLine();
+
+        System.out.println("Enter second large number:");
+        String num2 = in.nextLine();
+
+        BigInteger a = new BigInteger(num1);
+        BigInteger b = new BigInteger(num2);
+
+        System.out.println("Choose operation: 1 = Add, 2 = Subtract");
+        int choice = in.nextInt();
+
+        if (choice == 1) {
+            BigInteger sum = a.add(b);
+            System.out.println("Result of addition = " + sum);
+        } else if (choice == 2) {
+            BigInteger diff = a.subtract(b);
+            System.out.println("Result of subtraction = " + diff);
+        } else {
+            System.out.println("Invalid choice!");
+        }
+    }
+}
