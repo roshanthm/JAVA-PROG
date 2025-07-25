@@ -1,0 +1,19 @@
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int n,c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter how many numbers u want multiplication:");
+        n = sc.nextInt();
+        for (int i=1;i<=n;i++){
+            c=0;
+            System.out.println("enter the number "+i);
+            c=sc.nextInt();
+            for(int j=1;j<=10;j++){
+                System.out.println(c + "*" + j +"="+c*j);
+            }
+            
+        }
+    }
+}
