@@ -1,0 +1,11 @@
+class Star {
+    public static void main(String[] args) {
+        int c, num;
+        for (c = 1; c <= 10; c++) {
+            for (num = 1; num <= c; num++) {
+                System.out.print("*");
+            }
+            System.out.println(); // Move to the next line
+        }
+    }
+}
