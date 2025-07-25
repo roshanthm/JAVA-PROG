@@ -1,0 +1,5 @@
+String word = "apple";
+char ch = word.charAt(2); // 'p'
+
+String word = "apple";
+int len = word.length(); // 5
