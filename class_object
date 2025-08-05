@@ -1,0 +1,22 @@
+class calculator {
+
+    public int add(int n1,int n2){
+        int r=n1+n2;
+        return r;
+    }
+
+    
+} 
+
+
+public class classobj {
+    public static void main(String[] args) {
+        int n1=10;
+        int n2=20;
+
+        calculator cal=new calculator();
+        int result=cal.add(n1,n2);
+        System.out.println(result);
+
+    }
+}
