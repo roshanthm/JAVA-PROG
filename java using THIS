@@ -1,0 +1,18 @@
+class Student {
+    String name;  // 1️⃣ This is an instance variable (belongs to each Student object)
+
+    Student(String name) {
+        this.name = name;  // 2️⃣ 'this.name' is the instance variable, 'name' is the parameter
+    }
+
+    void show() {
+        System.out.println("Name: " + name);  // 5️⃣ Prints the name stored in the object
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("Roshan");  // 3️⃣ Creates a Student object and passes "Roshan"
+        s1.show();  // 4️⃣ Calls the show() method to display the name
+    }
+}
