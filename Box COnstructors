@@ -1,0 +1,47 @@
+class Box {
+    double width;
+    double height;
+    double depth;
+
+    // 1. Default constructor
+    Box() {
+        width = 1;
+        height = 1;
+        depth = 1;
+    }
+
+    // 2. Constructor with parameters
+    Box(double w, double h, double d) {
+        width = w;
+        height = h;
+        depth = d;
+    }
+
+    // 3. Copy constructor
+    Box(Box b) {
+        width = b.width;
+        height = b.height;
+        depth = b.depth;
+    }
+
+    // Method to calculate volume
+    double volume() {
+        return width * height * depth;
+    }
+}
+
+public class BoxDemo {
+    public static void main(String[] args) {
+        // Using default constructor
+        Box b1 = new Box();
+        System.out.println("Volume of b1: " + b1.volume());
+
+        // Using parameterized constructor
+        Box b2 = new Box(2, 3, 4);
+        System.out.println("Volume of b2: " + b2.volume());
+
+        // Using copy constructor
+        Box b3 = new Box(b2);
+        System.out.println("Volume of b3 (copied from b2): " + b3.volume());
+    }
+}
