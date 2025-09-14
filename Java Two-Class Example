@@ -1,0 +1,26 @@
+package hi;
+public class hello {
+    public static void main(String[] args) {
+        second s = new second();
+        s.display();               // Start the chain
+    }
+}
+
+
+// make the 2nd class
+
+package hi;
+
+
+public class second {
+    public void display() {
+        System.out.println("Hi"); // Print "Hi"
+    }
+}
+
+
+//how to run in vscode
+PS F:\java pratices\hi> javac *.java
+PS F:\java pratices\hi> cd .. 
+PS F:\java pratices> java hi.hello
+Hi 
