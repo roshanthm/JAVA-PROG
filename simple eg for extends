@@ -1,0 +1,21 @@
+// Parent class
+class Animal {
+    int a=5;
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+// Child class
+class Dog extends Animal {   // Dog inherits from Animal
+    void sound() {
+        System.out.println("Dog barks"+" "+a);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();   // Create Dog object
+        d.sound();           // Output: Dog barks 5
+    }
+}
