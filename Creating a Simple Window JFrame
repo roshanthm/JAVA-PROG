@@ -1,0 +1,10 @@
+import javax.swing.JFrame;
+
+public class MyWindow {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Hello, Roshan!");
+        frame.setSize(400, 300); // width x height
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true); // show the window
+    }
+}
