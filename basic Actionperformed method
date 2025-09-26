@@ -1,0 +1,42 @@
+import javax.swing.*;
+import java.awt.event.*;
+
+public class MyGUI implements ActionListener {
+    JTextField text;
+    JButton helloButton, clearButton;
+
+    public MyGUI() {
+        JFrame frame = new JFrame("Roshan's First GUI");
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(null);
+
+        text = new JTextField();
+        text.setBounds(30, 30, 220, 30);
+        frame.add(text);
+
+        helloButton = new JButton("Say Hello");
+        helloButton.setBounds(30, 70, 100, 30);
+        helloButton.addActionListener(this);
+        frame.add(helloButton);
+
+        clearButton = new JButton("Clear");
+        clearButton.setBounds(150, 70, 100, 30);
+        clearButton.addActionListener(this);
+        frame.add(clearButton);
+
+        frame.setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == helloButton) {
+            text.setText("Hello, Roshan!");
+        } else if (e.getSource() == clearButton) {
+            text.setText("");
+        }
+    }
+
+    public static void main(String[] args) {
+        new MyGUI();
+    }
+}
