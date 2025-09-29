@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class SchoolSubjects {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of subjects: ");
+        int n = sc.nextInt();
+        sc.nextLine(); // consume newline
+
+        String[] subjects = new String[n];
+
+        System.out.println("Enter subject names:");
+        for (int i = 0; i < n; i++) {
+            subjects[i] = sc.nextLine();
+        }
+
+        System.out.println("\nProcessing subjects:");
+
+        for (int i = 0; i < subjects.length; i++) {
+            String subject = subjects[i];
+
+            // Skip lab subjects
+            if (subject.contains("Lab")) {
+                System.out.println("Skipping " + subject);
+                continue;
+            }
+
+            // Stop if "Sports" is encountered
+            if (subject.equals("Sports")) {
+                System.out.println("Reached " + subject + ", stopping processing.");
+                break;
+            }
+
+            // Process normal subjects
+            System.out.println("Processing " + subject);
+        }
+
+        System.out.println("Subject processing completed.");
+        sc.close();
+    }
+}
