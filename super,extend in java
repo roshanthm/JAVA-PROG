@@ -1,0 +1,27 @@
+class Student{
+    String name;
+    int age=10;
+    void hello(){
+        System.out.println("how are u");
+    }
+}
+
+class test extends Student{
+    void hello(){
+        super.hello();
+        System.out.println("test one");
+        System.out.println(age);
+    }
+}
+
+
+public class check {
+    public static void main(String[] args) {
+        test t = new test();
+        t.hello();    //how are u
+                      //test one
+                      //10
+        
+
+    }
+}
