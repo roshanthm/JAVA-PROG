@@ -1,0 +1,23 @@
+
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        try{
+            int a=10;
+            int b=0;
+            System.out.println(a/b);
+        }catch (ArithmeticException e){
+            System.out.println("cant divide by 0"+"   " +e);
+            
+            
+            
+        }finally{
+            System.out.println("comleted");
+        }
+    }
+}
+
+//output
+cant divide by 0   java.lang.ArithmeticException: / by zero
+comleted
