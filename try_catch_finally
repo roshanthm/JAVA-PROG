@@ -1,23 +1,27 @@
+import java.util.Scanner;
 
-
-class Main {
+public class MultiCatchExample {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        try{
-            int a=10;
-            int b=0;
-            System.out.println(a/b);
-        }catch (ArithmeticException e){
-            System.out.println("cant divide by 0"+"   " +e);
-            
-            
-            
-        }finally{
-            System.out.println("comleted");
+
+        try {
+            System.out.print("Enter a number: ");
+            int num = input.nextInt();  
+
+            int result = 10 / num;      
+            System.out.println("Result: " + result);
+
+            String text = null;
+            System.out.println(text.length());   
+
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Cannot divide by zero");
+        } catch (NullPointerException e) {
+            System.out.println("Error: Null value encountered");
+        } catch (java.util.InputMismatchException e) {
+            System.out.println("Error: Invalid input type");
+        } finally {
+            System.out.println("Execution completed");
         }
     }
 }
-
-//output
-cant divide by 0   java.lang.ArithmeticException: / by zero
-comleted
