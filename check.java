@@ -1,0 +1,35 @@
+class Student {
+    String name;
+    int age;
+
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void hello() {
+        System.out.println("Student name: " + name);
+        System.out.println("Student age: " + age);
+    }
+}
+
+class Test extends Student {
+    String subject;
+
+    Test(String name, int age, String subject) {
+        super(name, age); // calls Student's constructor
+        this.subject = subject;
+    }
+
+    void hello() {
+        super.hello(); // calls Student's hello()
+        System.out.println("Subject: " + subject);
+    }
+}
+
+public class check {
+    public static void main(String[] args) {
+        Test t = new Test("Roshan", 21, "Java");
+        t.hello();
+    }
+}

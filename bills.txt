@@ -1,0 +1,25 @@
+=== Billing History ===
+
+🧾 BILL RECEIPT
+Product: apple
+Quantity: 5
+Price per Item (after discount): 90.0
+Extra Member Discount: 10%
+Subtotal: 405.0
+Tax (5%): 20.25
+Total Price: 425.25
+Customer: Member
+===================================
+
+🧾 BILL RECEIPT
+Product: apple
+Quantity: 4
+Price per Item (after discount): 90.0
+Extra Member Discount: 10%
+Subtotal: 324.0
+Tax (5%): 16.2
+Total Price: 340.2
+Customer: Member
+===================================
+
+💰 Daily Total Sales: 765.45
